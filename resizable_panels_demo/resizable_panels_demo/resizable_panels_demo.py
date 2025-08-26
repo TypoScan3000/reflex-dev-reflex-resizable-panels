@@ -51,9 +51,12 @@ def panels():
 
 def index() -> rx.Component:
     return rx.box(
-        panels(),
-        height="100vh",
-    ), rx.color_mode.button(position="top-right")
+        rx.box(
+            panels(),
+            height="100vh",
+        ),
+        rx.color_mode.button(position="top-right"),
+    )
 
 
 # Add state and page to the app.
